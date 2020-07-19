@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Command Pattern/Example1/TestExample1.unity
+- path: Assets/Creational Pattern/Abstract Factory Pattern/Example1/TestExample1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -8,5 +8,18 @@ This repository is about patterns in 《game programming patterns》 implemented
 
 ## Content 内容
 
+### Behavioral Pattern 行为型模式
+
+主要用于描述类或者对象怎样交互和怎样给分配职责。
+
 - Command Pattern 命令模式
 
+### Creational Pattern 创建型模式
+
+主要用于创建对象。
+
+- Factory Pattern 工厂模式
+
+### Structural Pattern 结构型模式
+
+主要用于处理类或对象的组合。
