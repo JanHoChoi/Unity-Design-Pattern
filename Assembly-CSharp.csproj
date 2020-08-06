@@ -66,6 +66,7 @@
     <Compile Include="Assets\Behavioral Pattern\Command Pattern\Example1\CommandPatternExample1.cs" />
     <Compile Include="Assets\Creational Pattern\Abstract Factory Pattern\Example1\AbstractFactoryPatternExample1.cs" />
     <Compile Include="Assets\Creational Pattern\Factory Method Pattern\Example1\FactoryMethodPatternExample1.cs" />
+    <Compile Include="Assets\Structural Pattern\Flyweight Pattern\Example1\FlyweightPatternExample1.cs" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/2019.4.0f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
