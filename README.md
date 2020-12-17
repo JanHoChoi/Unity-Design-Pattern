@@ -14,12 +14,22 @@ This repository is about patterns in 《game programming patterns》 implemented
 
 - Command Pattern 命令模式
 
+- Observer Pattern 观察者模式
+
 ### Creational Pattern 创建型模式
 
 主要用于创建对象。
 
-- Factory Pattern 工厂模式
+- Abstract Factory Pattern 抽象工厂模式
+
+- Factory Method Pattern 工厂方法模式
+
+- Prototype Pattern 原型模式
+
+- Singleton Pattern 单例模式
 
 ### Structural Pattern 结构型模式
 
 主要用于处理类或对象的组合。
+
+- Flyweight Pattern 享元模式
