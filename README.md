@@ -13,8 +13,8 @@ This repository is about patterns in 《game programming patterns》 implemented
 主要用于描述类或者对象怎样交互和怎样给分配职责。
 
 - Command Pattern 命令模式
-
 - Observer Pattern 观察者模式
+- State Pattern 状态模式
 
 ### Creational Pattern 创建型模式
 
