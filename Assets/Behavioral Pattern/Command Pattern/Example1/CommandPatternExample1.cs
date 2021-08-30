@@ -104,7 +104,6 @@ namespace CommandPatternExample1
     {
         private Hero hero;
         private Vector2 pos;
-        private Vector2 before_pos;
 
         public MoveCommand(Hero _hero, Vector2 _pos)
         {
@@ -114,13 +113,12 @@ namespace CommandPatternExample1
 
         public void execute()
         {
-            before_pos = hero.GetPos();
             hero.Move(pos);
         }
 
         public void undo()
         {
-            hero.Move(before_pos);
+            hero.Move(-pos);
         }
     }
 
@@ -162,8 +160,9 @@ namespace CommandPatternExample1
 
         public void Move(Vector2 newPos)
         {
-            Debug.Log(heroName + " moves from " + curPos.ToString() + " to " + newPos.ToString());
-            curPos = newPos;
+            Vector2 beforePos = curPos;
+            curPos = curPos + newPos;
+            Debug.Log(heroName + " moves from " + beforePos.ToString() + " to " + curPos.ToString());
         }
 
         public void Jump()
