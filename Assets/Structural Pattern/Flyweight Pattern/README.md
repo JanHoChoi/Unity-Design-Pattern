@@ -1,3 +1,8 @@
+---
+typora-copy-images-to: ../../../Pictures
+typora-root-url: ../../../Pictures
+---
+
 # Flyweight Pattern 享元模式
 
 ## Usage 用途
@@ -9,6 +14,8 @@
 ## Definition 定义
 
 可以支持用共享对象表示大量的重复的对象。
+
+![image-20210905141423710](/image-20210905141423710.png)
 
 ## Element 要素
 
