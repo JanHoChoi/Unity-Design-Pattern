@@ -1,8 +1,3 @@
----
-typora-copy-images-to: ../../../Pictures
-typora-root-url: ../../../Pictures
----
-
 # Command Pattern 命令模式
 
 ## Usage 用途
@@ -18,8 +13,6 @@ AI引擎提供命令对象让角色执行。
 ## Definition 定义
 
  将一个请求（request）封装成一个对象，以便使用不同的请求、队列或日志来参数化其他对象。命令模式也支持可撤销的操作。
-
-![image-20210905141742658](/image-20210905141742658.png)
 
 ## Element 要素
 
