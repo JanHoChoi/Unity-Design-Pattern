@@ -10,6 +10,8 @@
 
 可以支持用共享对象表示大量的重复的对象。
 
+![flyweight](https://github.com/JanHoChoi/Unity-Design-Pattern/blob/master/Pictures/flyweight.gif)
+
 ## Element 要素
 
 ### Flyweight 享元
