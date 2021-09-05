@@ -14,6 +14,8 @@ AI引擎提供命令对象让角色执行。
 
  将一个请求（request）封装成一个对象，以便使用不同的请求、队列或日志来参数化其他对象。命令模式也支持可撤销的操作。
 
+![command](https://github.com/JanHoChoi/Unity-Design-Pattern/blob/master/Pictures/command.gif)
+
 ## Element 要素
 
 ### Command 命令
