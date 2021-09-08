@@ -22,19 +22,19 @@ namespace StatePatternExample1
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKey(KeyCode.W))
             {
                 curState.HandleInput("W");
             }
-            else if (Input.GetKeyDown(KeyCode.A))
+            else if (Input.GetKey(KeyCode.A))
             {
                 curState.HandleInput("A");
             }
-            else if (Input.GetKeyDown(KeyCode.S))
+            else if (Input.GetKey(KeyCode.S))
             {
                 curState.HandleInput("S");
             }
-            else if (Input.GetKeyDown(KeyCode.D))
+            else if (Input.GetKey(KeyCode.D))
             {
                 curState.HandleInput("D");
             }
@@ -46,6 +46,7 @@ namespace StatePatternExample1
             {
                 curState.HandleInput("Null");
             }
+            curState.Update();
         }
     
         public void SwitchState(string stateName)
@@ -100,6 +101,14 @@ namespace StatePatternExample1
             }
         }
 
+        public override void Enter()
+        {         
+        }
+
+        public override void Leave()
+        {
+        }
+
         public override void Update()
         {
             Debug.Log("Player is standing!");
@@ -146,6 +155,16 @@ namespace StatePatternExample1
                 this.context.SwitchState("StandingState");
         }
 
+        public override void Enter()
+        {
+            speed = 1.0f;
+            direction = "Null";
+        }
+
+        public override void Leave()
+        {
+        }
+
         public override void Update()
         {
             Debug.Log("Player is walking toward " + direction + " and speed = " + speed.ToString());
@@ -155,7 +174,7 @@ namespace StatePatternExample1
     public class HeroJumpingState : HeroBaseState
     {
         private StatePatternExample1 context;
-        private float height = 0.0f;
+        private float height = 1.0f;
         public HeroJumpingState(StatePatternExample1 context)
         {
             this.context = context;
@@ -163,36 +182,23 @@ namespace StatePatternExample1
 
         public override void HandleInput(string op)
         {
-            switch(op)
-            {
-                case "W":
-                    direction = "North";
-                    speed = 1.0f;
-                    break;
-                case "A":
-                    direction = "West";
-                    speed = 1.0f;
-                    break;
-                case "S":
-                    direction = "South";
-                    speed = 1.0f;
-                    break;
-                case "D":
-                    direction = "East";
-                    speed = 1.0f;
-                    break;
-                case "Space":
-                    this.context.SwitchState("JumpingState");
-                    break;
-                case "Null":
-                    speed -= 0.1f;
-                    break;
-            }
+        }
+
+        public override void Enter()
+        {
+            height = 1.0f;
+        }
+
+        public override void Leave()
+        {
         }
 
         public override void Update()
         {
-            // todo
+            height -= 0.02f;
+            if (height < 0)
+                this.context.SwitchState("StandingState");
+            Debug.Log("Player is on air !" + " And height = " + height.ToString());
         }
     }
 }
